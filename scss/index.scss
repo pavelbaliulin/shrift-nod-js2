@@ -1,0 +1,39 @@
+@mixin shrift(
+  $cl: grey,
+  $fz: 40px,
+  $ss: Arial,
+  $ps: small-caps,
+  $td: none,
+  $ls: 0.5em,
+  $fs: italic,
+  $fw: bold,
+  $tt: capitalize,
+  $va: sub
+) {
+  color: $cl;
+  font-size: $fz;
+  font-family: $ss;
+  font-variant: $ps;
+  text-decoration: $td;
+  letter-spacing: $ls;
+  font-style: $fs;
+  font-weight: $fw;
+  text-transform: $tt;
+  vertical-align: $va;
+}
+
+@mixin flexC($disp, $ai, $js, $h) {
+  display: $disp;
+  align-items: $ai;
+  justify-content: $js;
+  height: $h;
+}
+
+a {
+  @include shrift();
+}
+
+body {
+  @include flexC(flex, center, center, 100vh);
+  margin: 0;
+}
